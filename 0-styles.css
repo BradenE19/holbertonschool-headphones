@@ -338,6 +338,58 @@ a:active {
     }
 }
 
+/* TABLET */
+
+@media screen and (min-width: 768px) {
+    .container {
+        inline-size: 600px;
+    }
+
+    .header_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block-start: 20px;
+    }
+
+    .nav-list {
+        display: inline-flex;
+        justify-content: space-between;
+        inline-size: 275px;
+    }
+
+    .logo {
+        flex-basis: 80%;
+    }
+
+    .nav-icon {
+        display: none;
+    }
+
+    .header-hero {
+        background-repeat: no-repeat;
+        background-position: center 0;
+    }
+
+    .header-1 {
+        margin: auto;
+    }
+
+    .header-2 {
+        margin: 10px auto;
+        inline-size: 600px;
+    }
+
+    .btn {
+        margin: 30px auto;
+    }
+
+    .header-3 {
+        inline-size: 600px;
+        margin: 10px auto;
+    }
+}
+
 /* DESKTOP */
 
 @media screen and (min-width: 1024px) {

@@ -164,6 +164,9 @@ html {
     --header-background-color: #071629;
   
     --hambuger-line-height: 2px;
+  
+    /* Sections */
+    --do-separation: calc(58px / 2);
   }
   
   /* Base
@@ -475,7 +478,7 @@ html {
     justify-content: center;
     align-items: center;
     max-width: var(--section-description-width);
-    margin: 110px auto 97px;
+    margin: 0 auto 97px;
     line-height: 26px;
     text-align: center;
   }
@@ -488,18 +491,17 @@ html {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: 110px;
+    max-width: 1002px;
+    height: auto;
   }
   
   /* SECTION What we do
       ============================== */
   .what-we-do {
     color: var(--color-black);
-  }
-  
-  .what-we-do .section-body {
+    margin-top: 110px;
     margin-bottom: 110px;
-    max-width: 1002px;
-    height: auto;
   }
   
   .do h3 {
@@ -511,12 +513,20 @@ html {
     line-height: 26px;
   }
   
+  .do-1 {
+    padding-right: var(--do-separation);
+  }
+  
   .do-2 {
-    padding-right: 58px;
-    padding-left: 58px;
+    padding-right: var(--do-separation);
+    padding-left: var(--do-separation);
   }
   .do-3 {
-    padding-right: 58px;
+    padding-left: var(--do-separation);
+    padding-right: var(--do-separation);
+  }
+  .do-4 {
+    padding-left: var(--do-separation);
   }
   
   .icon {
@@ -528,7 +538,7 @@ html {
     :root {
       --do-separation: 65px;
     }
-    .what-we-do .section-body {
+    .section-body {
       flex-wrap: wrap;
       max-width: 472px;
       margin: 0 auto 110px auto;
@@ -547,6 +557,7 @@ html {
       padding-bottom: 96px;
     }
     .do-3 {
+      padding-left: 0;
       padding-right: var(--do-separation);
     }
     .do-4 {
@@ -563,8 +574,10 @@ html {
   }
   
   @media screen and (max-width: 480px) {
-    .what-we-do .section-header {
+    .section-header {
       max-width: 325px;
+    }
+    .what-we-do .section-header {
       margin-bottom: 110px;
     }
     .do-1,
@@ -580,190 +593,274 @@ html {
       padding-top: 96px;
     }
   }
-
-/* Our results
- ================= */
-
- :root {
-  --do-separation-pentagone: calc(76px / 2);
-}
-
-.our-results {
-  background-image: url(images/headphones_hero_2.jpg);
-  background-color: var(--header-background-color);
-  max-width: 100%;
-  height: auto;
-  /* background-size: cover; */
-  background-repeat: no-repeat;
-  background-position: center;
-  padding-top: 110px;
-  margin-top: 0;
-}
-
-.our-results .section-header {
-  margin-bottom: 56px;
-}
-
-.our-results .section-header h2 {
-  line-height: 37px;
-  margin-bottom: 40px;
-}
-
-.our-results .section-header p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.our-results img {
-  max-width: 100%;
-  height: auto;
-}
-
-.our-results .section-body {
-  padding-bottom: 79px;
-}
-
-.our-results .section-body .do-1,
-.our-results .section-body .do-2,
-.our-results .section-body .do-3,
-.our-results .section-body .do-4 {
-  position: relative;
-}
-
-.our-results .section-body .result-text {
-  position: absolute;
-  width: 120px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.our-results .section-body h3 {
-  font-size: 46px;
-  line-height: 26px;
-  margin-top: 60px;
-  margin-bottom: 20px;
-}
-.our-results .section-body p {
-  font-size: 14px;
-  line-height: 26px;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-.our-results .do-1 {
-  padding-right: 0;
-  margin-right: var(--do-separation-pentagone);
-}
-.our-results .do-2 {
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: var(--do-separation-pentagone);
-  margin-right: var(--do-separation-pentagone);
-}
-.our-results .do-3 {
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: var(--do-separation-pentagone);
-  margin-right: var(--do-separation-pentagone);
-}
-.our-results .do-4 {
-  margin-left: var(--do-separation-pentagone);
-  padding-left: 0;
-  padding-right: 0;
-}
-
-@media screen and (max-width: 1010px) {
-  :root {
-    --do-separation-pentagone: calc(12px / 2);
-  }
-}
-
-@media screen and (max-width: 768px) {
+  
+  /* SECTION Our Results
+      ============================== */
   :root {
     --do-separation-pentagone: calc(76px / 2);
   }
+  
   .our-results {
-    background-size: cover;
-    background-position-y: -95px;
-    background-position-x: -380px;
+    background-image: url(images/headphones_hero_2.jpg);
+    background-color: var(--header-background-color);
+    max-width: 100%;
+    height: auto;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 110px;
+    margin-top: 0;
   }
-
+  
   .our-results .section-header {
-    margin-bottom: 76px;
+    margin-bottom: 56px;
   }
-  .our-results img {
-    max-width: 190px;
-  }
-
-  .our-results .do-1 {
-    padding: 0;
-    margin: 0;
-    margin-right: var(--do-separation-pentagone);
-    margin-bottom: 42px;
-  }
-  .our-results .do-2 {
-    padding: 0;
-    margin: 0;
-    margin-left: var(--do-separation-pentagone);
-    margin-bottom: 42px;
-  }
-  .our-results .do-3 {
-    padding: 0;
-    margin: 0;
-    margin-right: var(--do-separation-pentagone);
-  }
-  .our-results .do-4 {
-    padding: 0;
-    margin: 0;
-    margin-left: var(--do-separation-pentagone);
-  }
-}
-
-@media screen and (max-width: 560px) {
-  .our-results img {
-    max-width: 160px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .our-results {
-    background-size: initial;
-    background-position-y: -70px;
-    background-position-x: -505px;
-  }
-
-  .our-results .section-header {
-    max-width: 305px;
-  }
+  
   .our-results .section-header h2 {
-    margin-right: 10px;
-    margin-left: 10px;
+    line-height: 37px;
+    margin-bottom: 40px;
   }
-
-  .our-results .section-body {
-    max-width: 190px;
+  
+  .our-results .section-header p {
+    margin-top: 0;
+    margin-bottom: 0;
   }
+  
   .our-results img {
-    max-width: 190px;
+    max-width: 100%;
+    height: auto;
   }
+  
+  .our-results .section-body {
+    padding-bottom: 79px;
+    margin-bottom: 0;
+  }
+  
+  .our-results .section-body .do-1,
+  .our-results .section-body .do-2,
+  .our-results .section-body .do-3,
+  .our-results .section-body .do-4 {
+    position: relative;
+  }
+  
+  .our-results .section-body .result-text {
+    position: absolute;
+    width: 120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .our-results .section-body h3 {
+    font-size: 46px;
+    line-height: 26px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+  .our-results .section-body p {
+    font-size: 14px;
+    line-height: 26px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
   .our-results .do-1 {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 42px;
+    padding-right: 0;
+    margin-right: var(--do-separation-pentagone);
   }
   .our-results .do-2 {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 42px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: var(--do-separation-pentagone);
+    margin-right: var(--do-separation-pentagone);
   }
   .our-results .do-3 {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 42px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: var(--do-separation-pentagone);
+    margin-right: var(--do-separation-pentagone);
   }
   .our-results .do-4 {
-    padding: 0;
-    margin: 0;
+    margin-left: var(--do-separation-pentagone);
+    padding-left: 0;
+    padding-right: 0;
   }
-}
+  
+  @media screen and (max-width: 1010px) {
+    :root {
+      --do-separation-pentagone: calc(12px / 2);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    :root {
+      --do-separation-pentagone: calc(76px / 2);
+    }
+    .our-results {
+      background-size: cover;
+      background-position-y: -95px;
+      background-position-x: -380px;
+    }
+  
+    .our-results .section-header {
+      margin-bottom: 76px;
+    }
+    .our-results img {
+      max-width: 190px;
+    }
+  
+    .our-results .do-1 {
+      padding: 0;
+      margin: 0;
+      margin-right: var(--do-separation-pentagone);
+      margin-bottom: 42px;
+    }
+    .our-results .do-2 {
+      padding: 0;
+      margin: 0;
+      margin-left: var(--do-separation-pentagone);
+      margin-bottom: 42px;
+    }
+    .our-results .do-3 {
+      padding: 0;
+      margin: 0;
+      margin-right: var(--do-separation-pentagone);
+    }
+    .our-results .do-4 {
+      padding: 0;
+      margin: 0;
+      margin-left: var(--do-separation-pentagone);
+    }
+  }
+  
+  @media screen and (max-width: 560px) {
+    .our-results img {
+      max-width: 160px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .our-results {
+      background-size: initial;
+      background-position-y: -70px;
+      background-position-x: -505px;
+    }
+  
+    .our-results .section-header {
+      max-width: 305px;
+    }
+    .our-results .section-header h2 {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  
+    .our-results .section-body {
+      max-width: 190px;
+    }
+    .our-results img {
+      max-width: 190px;
+    }
+    .our-results .do-1 {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 42px;
+    }
+    .our-results .do-2 {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 42px;
+    }
+    .our-results .do-3 {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 42px;
+    }
+    .our-results .do-4 {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  
+  /* SECTION Contact us
+      ============================== */
+  :root {
+    --form-separation: calc(45px / 2);
+  }
+  
+  .contact-us {
+    color: var(--color-black);
+    margin-top: 0;
+    padding-top: 110px;
+    padding-bottom: 130px;
+  }
+  
+  .contact-us h2 {
+    margin: 0;
+    font-size: 32px;
+    line-height: 37px;
+  }
+  
+  .contact-us .section-header {
+    margin-bottom: 56px;
+  }
+  
+  .contact-us .section-body {
+    margin: 0 auto;
+  }
+  .form-contact {
+    width: 335px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-field {
+    border: 0;
+    border-bottom: 1px solid #d4d7da;
+    width: 335px;
+    padding-bottom: 10px;
+  }
+  
+  .form-field::placeholder {
+    color: var(--color-black);
+    line-height: 16px;
+    padding-bottom: 10px;
+  }
+  
+  .name {
+    margin-bottom: var(--form-separation);
+  }
+  
+  .email {
+    margin-bottom: var(--form-separation);
+    margin-top: var(--form-separation);
+  }
+  
+  .message {
+    margin-top: var(--form-separation);
+    margin-bottom: var(--form-separation);
+  }
+  
+  .form-help {
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: 360ms ease-in-out;
+  }
+  
+  .name:focus + .form-help {
+    max-height: 2.5rem;
+  }
+  
+  .email:focus + .form-help {
+    max-height: 2.5rem;
+  }
+  
+  .message:focus + .form-help {
+    max-height: 2.5rem;
+  }
+  
+  .contact-us .form-submit {
+    margin-top: calc(56px - var(--form-separation));
+  }

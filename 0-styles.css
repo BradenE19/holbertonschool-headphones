@@ -12,7 +12,7 @@
         --font-family-II: "spain Cycle OT", sans-serif;
 
         --header-background-color: #071629;
-        --hambuger-line-height: 2px;
+        --footer-line-height: 2px;
     }
 
     /* Base
@@ -105,7 +105,7 @@
     color: var(--color-hover-active);
     }
 
-    /* HERO SECTION
+    /* Hero
     ============================== */
 
     .hero {
@@ -135,7 +135,7 @@
         filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.5));;
     }
 
-    /* Hambuger
+    /* Footer
     ============================== */
 
     .menu-icon {

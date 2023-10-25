@@ -1,61 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Headphones</title>
-    <link rel="icon" type="image/favicon.ico" href="images/favicon.png">
-    <link rel='stylesheet' href='0-styles.css'>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./0-styles.css">
 </head>
 
 <body>
-    <!--Header-->
-    <header class="header">
-        <div class="container">
-            <div class="header-container">
-                <input type="checkbox" class="menu-btn" />
-                <label for="menu-btn" class="menu-icon">
-                    <span class="navicon"></span>
+    <!-- HEADER -->
+    <section class="header-hero">
+        <nav class="header">
+            <div class="container header_container">
+                <!-- menu  -->
+                <input type="checkbox" id="hamburger-menu">
+                <label for="hamburger-menu" class="nav-icon">
+                    <div class="bar-icon"></div>
                 </label>
-                <div class="header-logo">
-                    <a href="#">
-                        <img class="img-logo" src="images/logo_headphones.png" alt="headphone logo">
-                    </a>
-                </div>
-                <nav class="navbar-menu">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">what we do</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">our results</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">contact us</a>
-                        </li>
-                    </ul>
-                </nav>
+                <a href=""><img src="./images/logo_headphones.png" class="logo" alt="logo_headphones"></a>
+                <ul class="nav-list">
+                    <!-- NAVBAR -->
+                    <li class="nav-item"><a href="#what"><b>what we do</b></a></li>
+                    <li class="nav-item"><a href="#results"><b>our results</b></a></li>
+                    <li class="nav-item"><a href="#contact"><b>contact us</b></a></li>
+                </ul>
             </div>
-            <section class="hero">
-                <h1>Lorem ipsum dolor set amet lorem ipsum</h1>
-                <span>Lorem ipsum dolor set amet lorem ipsum dolor set</span>
-                <button class="button">CALL TO ACTION</button>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore
-                    magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-            </section>
+        </nav>
+        <div class="container">
+            <h1 class="header-1"><b>Lorem ipsum dolor set amet lorem ipsum</b></h1>
+            <h2 class="header-2"><b>Lorem ipsum dolor set amet lorem ipsum dolor set</b></h2>
+            <button class="btn"><b>CALL TO ACTION</b></button>
+            <p class="header-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur.</p>
         </div>
-    </header>
-    <!--Main-->
-    <main>
-        <!--what we do section--> 
-    </main>
-
+    </section>
 </body>
 
 </html>
